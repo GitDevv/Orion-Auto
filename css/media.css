@@ -1,0 +1,70 @@
+@media only screen and (max-width : 1250px) {
+	.comment_block .info_com {
+		max-width: 470px;
+	}
+	.comment_block .slick-slide .image{
+		margin-left: 20%; 
+		margin-right: 30px;
+	}
+	.style-slide.wraper-bus-slider .image {
+		margin: auto
+	}	
+	.all-news-slider{
+		padding: 0 50px;
+	}
+	.block_news .style-slide.wraper-bus-slider .title{
+		margin: auto;
+	}	
+	.block_news .style-slide.wraper-bus-slider .slick-slide{
+ 	 padding: 0 12px;
+	}
+	.block_news{
+		background: url(../img/content/bg-news.png) top center no-repeat;
+		background-size: auto;
+	}	
+	 .block_news .cont-slider span {
+		background-color: rgba(255,255,255,0.4);
+	}
+	 .block_news .cont-slider span:hover {
+		background-color: rgba(255,255,255,0.5);
+	}
+	.autopark .style-slide.wraper-bus-slider .image {
+		max-width: 100%;
+	}	
+	.all-bus-slider,
+	.tehprocces-slider{
+		padding:0 50px;
+	}
+	/**************/
+	.autopark.order_park .wraper-bus-slider  .all-bus-slider,
+	.tehprocces-slider{
+		max-width: 1024px;
+	}	
+	.tehprocces-slider{
+		margin: auto;
+	}
+	.order_park aside {
+		background: #fff;
+		padding-bottom: 0px;
+	}	
+	.calculator .wraper-bus-slider:after{
+		content: "";
+		height: 250px;
+		position: absolute;
+		top: 30px;
+		width: 1300px;
+		background: rgba(8, 170, 199,0.75);	
+		left:-4px;
+		z-index: -1;
+	} 	
+	.wraper-team-slider .team-slider{
+		width: 1024px;
+		margin: auto;
+		padding: 0 40px;
+	}
+	.wraper-team-slider .team-slider .slick-slide .title,
+	.wraper-team-slider .team-slider .slick-slide .image{
+		margin: auto;
+	}
+
+}
