@@ -176,7 +176,7 @@ footer .copyright {
 .content {
 }
 .content .top_main {
-	background: url(../img/content/main/bg1.png) top center no-repeat;
+	background: url(../img/content/main/bg1.png)  center no-repeat;
 	background-size: cover;
  
 }
@@ -943,7 +943,8 @@ a.zakaz_bus:active ,
 	top: -45px;
 }
 .style-slide.wraper-bus-slider .image > img,
-.all-news .image > img{
+.all-news .image > img,
+.image  a > img{
 	width: 120%;
 	height: auto;
 }
@@ -1307,10 +1308,25 @@ aside .container .item p {
 .bus a.zakaz_bus:active{
 	bottom: -4px;
 } 
-.info_bus img {
+.info_bus .image {
 	margin: 30px 48px 30px 0;
 	display: inline-block;
 	vertical-align: middle;	
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	height: 115px;
+	width: 115px;
+	overflow: hidden;
+	position: relative;
+	border: 1px solid #08aac7;
+}
+.info_bus .image img{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin: auto;
 }
 .info_bus p {
 	font-size: 16px;
@@ -1672,17 +1688,20 @@ aside .container .item p {
 .line_town form {
 	height: 80px;
 	padding-top: 25px;
+	position: relative;
 }
 .line_town select {
+	position: absolute;
 	width: 225px;
 	height: 32px;
 	font-size: 16px;
 	color: #000;
+	left: 0;
+	top: 24px;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 500;
 	border: 0;
 	padding-left: 10px;
-	position: relative;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	-webkit-user-select: none;
@@ -1693,6 +1712,7 @@ aside .container .item p {
 	text-indent: 0.01px;
 	text-overflow: '';
 	background: #fff url(../img/arrow_down.png) 198px center  no-repeat;
+/*	transition: all 0.2s ease;*/
 }
 .line_town select option{
 	padding: 0 10px;
@@ -1703,6 +1723,23 @@ aside .container .item p {
 	position: relative;
 	top: -3px;
 	margin: 0 52px 0 55px;
+	left: 230px;
+	cursor: pointer;
+}
+.line_town form select:nth-child(3){
+	left: 380px;
+}
+.line_town.active form select:first-child{
+ 	left: 380px; 
+}
+ 
+.line_town.active form select:nth-child(3){
+	left: 0px;
+}
+.line_town.active img{
+	transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
 }
 .line_town .order_ticket {
 	border-radius: 5px;
@@ -1733,12 +1770,17 @@ aside .container .item p {
 .timetable .row:nth-child(2n-1) {
 	background: #f6f6f6;
 }
+ 
 .timetable .row:first-child{
 	margin-top: 20px;
 	background: #fff;
 }
+.timetable .row:first-child,
+.timetable .row:nth-child(2){
+	background: #fff!important;
+}
 .timetable .row:nth-child(2n) {
-	background: #fff;
+	background: #fff;!important;
 }
 .timetable .row:first-child .column ,
 .timetable .row:nth-child(2) .column {
@@ -1777,3 +1819,178 @@ aside .container .item p {
 .gray{
 	background: #f6f6f6;
 } 
+.timetable .row:hover{
+	background: rgba(208, 208, 208, 0.2);
+}
+.column.active{
+	background: rgba(246, 246, 246,0.7);
+}
+
+
+/***/
+.main_page.autopark .slick-list{
+	padding-top: 35px!important;
+	margin-top: -35px;
+}
+.main_page.autopark .slick-slide{
+	position: relative;
+}
+.main_page.autopark .slick-slide .top{
+	width: 100%;
+	margin: auto;
+	z-index: 100;
+	padding: 0 14px;
+	background:transparent;
+}
+.main_page.autopark .slick-slide .top ul{
+	width: 100%;
+	margin-left: 0;
+    background-color: rgba(8, 170, 199,0.7);	
+}
+.main_page.autopark .slick-slide .top .title_hov{
+	left: -15px;
+}
+.main_page.autopark .cont-slider{
+	top: 35px;
+}
+
+.calculator .style-slide.wraper-bus-slider .image a > img{
+	width: 100%;
+}
+
+
+/**/
+.modal_container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0,0.7);
+	z-index: 9999;
+	display: none;
+}
+.close_modal{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;	
+}
+.modal_container  .modall{
+	width: 385px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto; 
+	display: table;
+	background: #fff;
+	padding: 20px 35px ;
+	border-radius: 5px;
+	display: none;
+	height: 480px;
+}
+.modal_container .close {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    display: block;
+    background:url(../img/fancybox_sprite.png) -1px 0px no-repeat ;
+    cursor: pointer;
+    border-radius: 50%;
+    top: -15px;
+    right: -15px;
+	opacity: 1!important;
+}
+.modal_container .modall h3 {
+	font-size: 26px;
+	text-align: center;
+	margin: 0 0 25px;
+}
+.modal_container form {
+}
+.modal_container label {
+    font-family: 'Roboto', sans-serif;	
+	font-size: 15px;
+	font-weight: 500;	
+}
+.modal_container input {
+	width: 275px;
+	padding: 0 10px;
+	height: 30px;
+	margin: 10px auto;
+	display: block;
+	font-size: 14px;
+	font-family: 'Roboto', sans-serif;	
+}
+::-webkit-input-placeholder {color:#010101;}
+::-moz-placeholder          {color:#010101;}
+:-moz-placeholder           {color:#010101;}
+:-ms-input-placeholder      {color:#010101;}
+.modal_container select {
+	width: 275px;
+	padding: 0 10px;
+	height: 30px;
+	margin: 10px auto;
+	display: block;	
+	font-size: 13px;	
+	font-weight: 500;
+	font-family: 'Roboto', sans-serif;	
+}
+.modal_container option {
+	font-family: 'Roboto', sans-serif;	
+	font-size: 13px;	
+	font-weight: 500;	
+	padding: 0 10px;	
+}
+.modal_container p {
+	font-family: 'Roboto', sans-serif;	
+	font-size: 13px;	
+	font-weight: 500;	
+	text-align: center;
+	margin: 20px 0;
+	display: block;
+}
+.modal_container a {
+	font-family: 'Roboto', sans-serif;	
+	font-size: 18px;	
+	font-weight: 500;	
+	text-align: center;
+	margin: 10px auto;
+	display: table;	
+	color: #010101;
+	text-decoration: none;
+}
+.modal_container a:hover{
+	color: #333333;
+	text-decoration: none;	
+}
+.modal_container button{
+	border-radius: 5px;
+	background-color: rgb(237, 179, 63);
+	width: 180px;
+	height: 38px;	
+	border: 0;
+	position: relative;
+	padding-bottom: 3px;
+	margin: 20px auto;
+	display: block;
+	border-bottom: 4px solid #d09829;
+	font-size: 18px;
+	font-weight: 400;
+	color: #fff;
+	font-family: 'Roboto', sans-serif;	
+	transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;	
+}
+.modal_container button:active{
+	border: 0;
+	top: 3px;
+}
+.modal_container button:hover{
+	background-color: rgb(250, 182, 46);	
+	border-color:  #af7a11;		
+}
